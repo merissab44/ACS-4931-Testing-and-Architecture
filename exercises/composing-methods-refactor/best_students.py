@@ -38,10 +38,12 @@ class School:
         # Send congrat emails to them.
         for s in passed_students:
             s.send_congrat_email()
-        # Find the top 10% of them and send their contact to the top employers
-        passed_students.sort(key=lambda s: s.get_gpa())
+
+        def get_passed_students():
+            return passed_students.sort(key=lambda s: s.get_gpa())
+            
         percentile = 0.9
-        index = int(percentile * len(passed_students))
+        index = int(percentile * len(get_passed_students()))
         top_10_percent = passed_students[index:]
         top_employers = [Employer('Microsoft'), Employer('Free Software Foundation'), Employer('Google')]
         for e in top_employers:
