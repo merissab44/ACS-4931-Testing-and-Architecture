@@ -41,7 +41,7 @@ class School:
 
         def get_passed_students():
             return passed_students.sort(key=lambda s: s.get_gpa())
-            
+
         percentile = 0.9
         index = int(percentile * len(get_passed_students()))
         top_10_percent = passed_students[index:]
