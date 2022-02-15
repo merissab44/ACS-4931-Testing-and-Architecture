@@ -12,7 +12,7 @@ In this series of exercises, we practice various refactoring techniques. You may
 - [x] Exercise 9: 'Rename Method' Technique
   - Study the file [calculate_area.py](calculate_area.py). Use `rename method` technique to clarify the code (make it easier to understand its intent.)
 
-- [ ] Exercise 10: 'Split Temporary Variable' Technique
+- [x] Exercise 10: 'Split Temporary Variable' Technique
   - Study the file [kinetic_energy.py](kinetic_energy.py). Use `split temporary variable` technique to clarify the code (make it easier to understand its intent.)
 
 # Where to Submit Your Answer
