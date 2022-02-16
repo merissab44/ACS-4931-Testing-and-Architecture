@@ -5,20 +5,21 @@ MEDIUM = 2500
 COOKED_CONSTANT = 0.05
 
 
-def is_cookeding_criteria_satisfied(time, temperature, 
-                                    pressure, desired_state):
+def is_cookeding_criteria_satisfied(time, temperature, pressure, desired_state):
     return is_well_done(time, temperature, pressure, desired_state) or \
            is_medium(time, temperature, pressure, desired_state)
 
 
-def is_well_done(time, temperature, pressure, desired_state):    
-    return desired_state == 'well-done' and  \
-           get_cooking_progress(time, temperature, pressure) >= WELL_DONE
+def is_well_done(time, temperature, pressure, desired_state):  
+    get_cooking_progress(time, temperature, pressure) >= WELL_DONE
+    if desired_state == 'well done':
+        return True
 
 
 def is_medium(time, temperature, pressure, desired_state):
-    return desired_state == 'medium' and  \
-           get_cooking_progress(time, temperature, pressure) >= MEDIUM
+    get_cooking_progress(time, temperature, pressure) >= MEDIUM
+    if desired_state == 'medium':
+        return True
 
 def get_cooking_progress(time, temperature, pressure):
     return time * temperature * pressure * COOKED_CONSTANT

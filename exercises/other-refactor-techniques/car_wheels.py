@@ -17,6 +17,9 @@ class Car:
         self.cabin = cabin
         self.fuel_tank = fuel_tank
 
+    def set_car(self, car):
+        self.car = car
+
     
 class Wheel:
     # TODO: You may add tpms as a method parameter here to 
@@ -33,16 +36,9 @@ class Wheel:
         print('cleaned tpms: ', 
               self.car.tpms_di[self.wheel_location].get_serial_number, 
               '.')
-        print('installed new tube.')        
-        
-    def read_tire_pressure(self):
-        # TODO: After making tpms an attribute of 'Wheel' class,
-        #       rewrite the following.
-        return self.car.tpms_di[self.wheel_location].get_pressure()
-    
+        print('installed new tube.')      
     def set_car(self, car):
-        self.car = car
-
+        self.car = car  
 
 class Tpms:
     """Tire Pressure Monitoring System.
@@ -58,6 +54,11 @@ class Tpms:
     
     def get_serial_number(self):
         return self.serial_number
+
+    def read_tire_pressure(self):
+        # TODO: After making tpms an attribute of 'Wheel' class,
+        #       rewrite the following.
+        return self.car.tpms_di[self.wheel_location].get_pressure()
     
 class Engine:
     def __init__(self):

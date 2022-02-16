@@ -5,12 +5,11 @@
 # Given two point charges, calcualte the electric force exerted on them.
 from asyncio import constants
 
-
+COULOMBS_CONSTANT = 8.9875517923*1e9
 q1 = int(input('Enter a value of charge q1: '))
 q2 = int(input('Enter a value of charge q2: '))
-constant =  8.9875517923*1e9
 distance = int(input("Enter the distance be10tween two charges: "))
-force = constant * q1 * q2/(distance**2)
+force = COULOMBS_CONSTANT * q1 * q2/(distance**2)
 print ("Electric Force between q1 and q2 is: ", force, "Newton")
 # Second Section
 num = int(input('Enter an integer number: '))
