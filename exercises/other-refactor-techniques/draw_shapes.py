@@ -30,7 +30,7 @@ class Rectangle:
         
     def display(self):
         if self.visible:
-            print('drew the rectable.')
+            print('drew the rectangle.')
             
     def hide(self):
         self.visible = False
